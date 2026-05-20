@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Assignment</title>
+    <style>
+
+        /* Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Type Selector */
+        h1 {
+            color: darkblue;
+            text-align: center;
+            margin: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        /* Class Selector */
+        .highlight {
+            color: green;
+            font-weight: bold;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 15px;
+            margin: 15px;
+            background-color: #f2f2f2;
+        }
+
+        /* ID Selector */
+        #mainHeader {
+            background-color: lightblue;
+            padding: 15px;
+        }
+
+        #specialText {
+            color: red;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="mainHeader">
+        <h1>Welcome to CSS Selectors Assignment</h1>
+    </div>
+
+    <div class="box">
+        <p>This paragraph uses a <span class="highlight">class selector</span> for styling.</p>
+        <p id="specialText">This paragraph uses an ID selector.</p>
+        <p>This paragraph uses a <span class="highlight">type selector</span> because it is a p tag.</p>
+    </div>
+
+</body>
+</html>

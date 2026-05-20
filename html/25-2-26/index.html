@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          size="10"
+          maxlength="3"
+          placeholder="Enter your name"
+          id="fname"
+          name="username"
+          value="Ali"
+          autocomplete="off"
+        />
+        <br /><br />
+
+        <input
+          type="number"
+          placeholder="Enter your age"
+          name="age"
+        /><br /><br />
+        <input type="password" placeholder="Enter your Password" /><br /><br />
+
+        <h1>Radio button</h1>
+
+        <p>Gender:</p>
+        <label for="">Male</label>
+        <input type="radio" name="gender" value="male" checked="checked" />
+
+        <label for="">Female</label>
+        <input type="radio" name="gender" value="female" />
+
+        <label for="">Others</label>
+        <input type="radio" name="gender" value="other" />
+      </fieldset>
+      <h1>checkbox</h1>
+      <p>subject</p>
+      <label for="">Maths</label>
+      <input type="checkbox" name="sub" /><br /><br />
+      <label for="">Science</label>
+      <input type="checkbox" name="sub" /><br /><br />
+      <label for="">Urdu</label>
+      <input type="checkbox" name="sub" /><br /><br />
+      <label for="">Computer</label>
+      <input type="checkbox" name="sub" /><br /><br />
+      <label for="">English</label>
+      <input type="checkbox" name="sub" checked="checked" />
+
+      <h1>DropDown</h1>
+      <p>Country</p>
+      <select name="con" id="">
+        <option value="" disabled>Select country</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="India">India</option>
+        <option value="China">China</option>
+        <option value="Iran">Iran</option>
+      </select>
+
+      <h1>file</h1>
+      <input type="file" multiple />
+      <input type="file" accept="image/jpeg" /><br /><br />
+
+      <label for="">User Feedback</label>
+      <textarea cols="10" rows="4"> </textarea> <br><br><br>
+
+      <input type="submit">
+      <button>Submit yourform</button>
+    </form>
+  </body>
+</html>
