@@ -1,0 +1,68 @@
+/* universal selector */
+/* symbol "*" */
+*{
+    background-color: aquamarine;
+    color: blue;
+}
+
+/* type selector */
+/* symbol element name */
+h1{
+    background-color: brown;
+}
+
+/* li{
+    background-color: darkgreen;
+}
+p{
+    background-color: darkseagreen;
+} */
+
+/* class selector */
+/* symbol .classvalue */
+/* attribute */
+.heading1{
+    background-color: blueviolet;
+}
+
+/* id selector */
+/* symbol #idvalue */
+/* attribute */
+#h2 {
+    background-color: rgb(17, 120, 86);
+}
+
+ul > li{
+    color: pink;
+}
+
+#h2 + h3{
+    background-color: bisque;
+}
+
+
+.headp {
+    background-color: blue;
+    color: black;
+}
+
+/* Child selector */
+ul>li{
+    background-color: pink;
+    color: chartreuse;
+}
+/* Desendent selector */
+/* space */
+ul p{
+    background-color: chocolate;
+}
+
+/* Adjacent sibling selector */
+/* symbol + */
+h2+h3{
+    color: grey;
+}
+/* symbol~ */
+h1~h3,h2{
+    color: hotpink;
+}

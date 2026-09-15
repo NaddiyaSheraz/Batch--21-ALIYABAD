@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Table Practice</title>
+</head>
+<body>
+    <table border="1" cellpadding="30" cellspacing="10">
+        <tr>
+            <td bgcolor="brown">Row1 col1</td>
+            <td bgcolor="pink">Row1 col2</td>
+        </tr>
+        <tr>
+           <td bgcolor="yellow"> row2 col1
+                <table border="2">
+                    <tr>
+                        <td>row1 col1</td>
+                        <td>row1 col2</td>
+                        <td>row1 col3</td>
+                    </tr>
+                    <tr>
+                        <td>row2 col1</td>
+                        <td>row2 col2</td>
+                        <td bgcolor="C49086" rowspan="2">row2 col3</td>
+                    </tr>
+                    <tr>
+                        <td>row3 col1</td>
+                        <td>row3 col2</td>
+                        <!-- <td>row3 col3</td> -->
+                    </tr>
+                </table>
+           </td>
+           <td bgcolor="green"> row2 col2</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
