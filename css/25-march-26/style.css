@@ -1,0 +1,27 @@
+h1 {
+    background-color: #f3ecea;
+    color: #fff4a3;
+
+    /* opacity: 0.6; */
+    /* background-color: rgba(229, 141, 141,1 ); */
+}
+
+h2 {
+    color: pink;
+}
+
+#css {
+    color: cadetblue;
+}
+
+.h2 {
+    color: blue !important;
+}
+
+h2 {
+    color: red;
+}
+
+
+
+

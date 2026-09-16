@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ////////////////////synchronous////////////////////
+        // console.log("First");
+        // console.log("second");
+        // console.log("Third");
+
+        ////////////////////Asynchronous////////////////////
+        // 1. setTimeout 
+        // javascript ka ek function jo code ko kuch delay ke bad chalata hai.
+
+        // console.log("1st class");
+        // setTimeout(()=>{
+        //     console.log("2nd class");
+        // }, 2000)
+        // console.log("3rd class");
+
+        // setTimeout(()=>{
+        //     console.log("hello every one");
+        // }, 1000);
+
+        // console.log("go to the class.");
+        // console.log("hi my girls");
+
+        ///////////////////// Event Loop///////////////////
+        // console.log("1")
+        // setTimeout(()=>{
+        //     console.log("2");
+        // }, 0);
+
+        // console.log("3");
+        // console.log("4");
+        // console.log("5");
+        // setTimeout(()=>{
+        //     console.log("7");
+        // }, 1);
+        // console.log("6");
+
+        ///////////////////// Event Loop///////////////////
+        ////////////example 1
+        // function callMe(a,b){
+        //     console.log(a+b)
+        // }
+
+        // function caller(a,b,sum){
+        //     sum(a,b)
+        // }
+        // caller(2,3,callMe)
+        // ///////////example 2
+
+        // function callMe2(a,b){
+        //     console.log(a+b)
+        // }
+
+        // function caller2(sum){
+        //     sum(2,3)
+        // }
+        // caller2(callMe2)
+
+        // //////////// calback with setTime out
+        // let caller3 = ()=>{
+        //     console.log("hello, this is you last class.")
+        // }
+
+        // setTimeout(caller3, 4000)
+
+        /////////////// callback hell  //////////////////
+        ////////////// pyramid of Dome ///////////////////
+
+
+        ///////////////// promise //////////////////
+        // javaScript ka built-in constructor jo asynchronous operation ke result ko represnt kaerta hai.
+        /// 3 states
+        /// pending
+        /// fulfiled
+        /// reject
+
+        ////.then() execute jb aap ka promise fulfiled ho ga.
+        ////.catch() execute jb promise reject ho ga 
+        ////.finally() succes ho ya na ho finally chle ga
+
+        ////resolve operation succesful ho ga
+        ////reject  jb operation reject
+
+
+        let student = new Promise((resolve, reject)=>{
+            let success = false;
+            if(success){
+                resolve("kaam ho gaya!")
+            }else{
+                reject("kaam nhi huwa")
+            }
+        })
+
+        student.then((result)=>{
+            console.log(result)
+        }).catch((error)=>{
+            console.log(error)
+        }).finally(()=>{
+            console.log("done")
+        })
+        
+        /// promise chaining
+
+
+
+
+    </script>
+</body>
+</html>

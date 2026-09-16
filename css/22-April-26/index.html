@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body{
+            background-color: black;
+            perspective: 800px;
+        }
+        .container{
+            height: 100px;
+            width: 100px;
+            margin: 70px;
+            background-color: rgb(239, 233, 233);
+            /* border-bottom-right-radius: 60px; */
+            border-width: 3px;
+            border-style: solid;
+            border-color: blue yellow green orange;
+            /* transform Move */
+            /* transform: translate(100px);
+            transform: translateY(100px);
+            transform: translateX(100px);
+            transform: translateZ(-100px);
+            transform: translate(100px, 100px);
+            transform: translateX(200px) translateY(200px); */
+
+            /* transform Rotate */
+            /* transform: rotate(138deg);
+            transform: rotateX(60deg);
+            transform: rotateY(60deg);
+            transform: rotateZ(90deg);
+            transform: rotate3d(30, 50, 70, 50deg); */
+
+            /* transform Scale */
+            /* transform: scale(4);
+            transform: scaleX(2);
+            transform: scaleY(2);
+            transform: scale3d(1,1,6); */
+
+            /* transform skew */
+            /* transform: skew(40deg);
+            transform: skewY(30deg);
+            transform: skewX(30deg); */
+
+            /* transform: rotate(30deg) scaleX(2) skewX(50deg);
+            
+            
+            */
+
+            /* transition: transform 3s ease-in; */
+
+            animation: animation1 2s ease-in-out infinite alternate;
+
+
+        
+        }
+
+        @keyframes move{
+            0%{
+                /* transform: scaleY(1); */
+                transform: rotateX(0);
+                opacity: 0;
+                color: rgb(202, 162, 240);
+            }
+
+            50%{
+                /* transform: ScaleY(2); */
+                transform: rotateX(40deg);
+                opacity: 1;
+                color: rgb(236, 172, 127);
+            }  
+        }
+
+
+
+
+
+
+
+        /* .container:hover{
+            transform: translate(400px, 300px);
+            transform: rotateX(50deg);
+            transform: scaleX(2);
+            background-color: pink;
+        } */
+
+        .heading {
+            transform: rotateX(30deg);
+            text-align: center;
+            margin-top: 40px;
+            color: White;
+            animation: move 2s ease-in-out infinite alternate;
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- <div class="container"></div> -->
+    <h1 class="heading">Hello World</h1>
+</body>
+</html>
