@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //////////////async
+        // async function student(){
+        //     // console.log("hello")
+        //     // return hello;
+        //     return "hello";
+        // }
+        // let result = student();
+        // console.log(result)
+
+        ///////////////////await
+        // await asyn function ki execution ko us point per  pause 
+        // kerta hai jb tk promise complete nhi ho jata
+
+        // async function helloFun(){
+        //    await new Promise(resolve => setTimeout(resolve, 5000))  
+
+        //     return "hello";
+        // }
+
+        // async function test(){
+        //     let result = await helloFun();
+        //     console.log(result)
+        // }
+
+        // test()
+
+
+        // async function hello(){
+        //   let result = await Promise.resolve ("hello")  
+        //     console.log(result);
+        // }
+        // hello()
+
+        /////////////////before and after
+
+        // function hello() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("hello");
+        //         }, 3000);
+        //     });
+        // }
+
+        // let promise = hello();
+
+        // console.log("Before:", promise); // Promise { <pending> }
+
+        // promise.then(result => {
+        //     console.log("After:", result); // hello
+        // });
+
+
+        /////////////////// fetch
+        //builtin function
+        // server data ko jSon formate mein bhaj skta hai
+        // {
+        //     "name": "naddiya",
+        //     "age": "12",
+        // }
+
+        // fetch('https://dummyjson.com/products')
+        // // .then(res=>res.json()
+        // // ).then(console.log)
+        //.then()
+
+        ////////// 1st response ko JSOn mein convert 
+        ///////// 2nd JSON data ko recieve kerke show kerta hai
+
+        //     fetch('https://dummyjson.com/products')
+        //     .then(res=>{
+        //         return res.json();
+        //     }).then(data =>{
+        //         console.log(data)
+        //     }).catch(err =>{
+        //     console.log(err)
+        // })
+
+
+        ///////// fetch with async await
+        async function getData() {
+            let res = await fetch('https://dummyjson.com/products/1');
+            let data = await res.json();
+            console.log(data);
+        }
+
+        getData();
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>
