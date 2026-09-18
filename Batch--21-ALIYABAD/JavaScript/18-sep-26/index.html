@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> GreenSock Animation Platform </title>
+    <style>
+        /* .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #a54d2a;
+            margin: 10px auto;
+            /* border-radius: 50px; */
+        /* } */ 
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #2aa52e;
+            margin: 10px auto;
+            /* border-radius: 50px; */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="box1"></div> -->
+    <div class="box2"></div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js" integrity="sha512-oJ8QbaQThQoJZ7oEv+29jfPM6CcP+zUxh3PKJs1vyOhx0UraUrE7PQgeItu3dOuCJyrzWpoYMsVjkkPEBzbUqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // // gsap.to(".box1",{
+        //     // y : 400,
+        //     x : 400,
+        //     // z: 300,
+        //     // x: -100,
+        //     // y: 400,
+        //     // y:-100,
+        //     duration: 1 ,
+        //     rotation: 360,
+        //     // rotationX: 360,
+        //     // rotationy: 360,
+        //     borderRadius : "50%",
+        //     backgroundColor: "#65a52a",
+        //     scale: 2,
+        //     // scale: -2,
+        //     opacity: 0.6,
+        //     delay: 1,
+        //     // ease: "none",
+        //     // ease: "power1.out",
+        //     // ease: "power2.in",
+        //     ease: "bounce.out"
+        // })
+
+        gsap.from(".box2", {
+            x: 500,
+            duration: 3,
+            opacity: 0.4,
+            backgroundColor: "black",
+            ease: "bounce.out",
+            repeat: -1,
+            yoyo: true
+        })
+
+        
+    </script>
+   
+   
+</body>
+</html>
