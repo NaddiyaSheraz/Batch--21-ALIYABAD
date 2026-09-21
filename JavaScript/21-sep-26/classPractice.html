@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GSAP Practice</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .box1 { background: red; }
+    .box2 { background: blue; }
+    .box3 { background: green; }
+    .box4 { background: orange; }
+    .box5 { background: purple; }
+    .box6 { background: brown; }
+    .box7 { background: teal; }
+    .box8 { background: pink; }
+    .box9 { background: black; }
+    .box10 { background: gray; }
+  </style>
+</head>
+
+<body>
+
+  <h1>GSAP Practice</h1>
+
+  <div class="container">
+<!-- 
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+    <div class="box box6">6</div>
+    <div class="box box9">9</div> -->
+    <div class="box box10">10</div>
+    <div class="box box7">7</div>
+    <!--
+    <div class="box box8">8</div>
+     -->
+
+  </div>
+
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+  <script>
+
+    // 1 X Movement
+    // gsap.to(".box1", {
+    //   x: 100,
+    //   duration: 2
+    // });
+
+    // // 2 Y Movement
+    // gsap.to(".box2", {
+    //   y: 100,
+    //   duration: 2
+    // });
+
+
+    // 3 Rotation
+    // gsap.to(".box3", {
+    //   rotation: 360,
+    //   duration: 2
+    // });
+
+
+    // // 4 Scale
+    // gsap.to(".box4", {
+    //   scale: 1.5,
+    //   duration: 2
+    // });
+
+
+    // // 5 Opacity
+    // gsap.to(".box5", {
+    //   opacity: 0.2,
+    //   duration: 2,
+    //   delay: 2,
+    // });
+
+
+    // // 6 From
+    // gsap.from(".box6", {
+    //   x: -300,
+    //   duration: 2,
+    //   ease: "power1.out"
+    // });
+
+
+    // // 7 FromTo
+    gsap.fromTo(".box7",
+      {
+        x: -200,
+        opacity: 0
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 2
+      }
+    );
+
+
+    // // 8 Delay
+    // gsap.to(".box8", {
+    //   x: 100,
+    //   duration: 2,
+    //   delay: 2
+    // });
+
+
+    // // 9 Repeat
+    // gsap.to(".box9", {
+    //   rotation: 360,
+    //   duration: 1,
+    //   repeat: 3
+    // });
+
+
+    // //  Yoyo
+    // gsap.to(".box10", {
+    //   x: 150,
+    //   duration: 1,
+    //   repeat: -1,
+    //   yoyo: true,
+    //   ease: "power1.inOut"
+    // });
+
+  </script>
+
+</body>
+</html>
