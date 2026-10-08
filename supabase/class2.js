@@ -42,9 +42,9 @@ addBtn.addEventListener("click", async function () {
         .from('todoss')
         .insert(newTodo);
 
-    if(error){
+    if (error) {
         console.log("there is an error", error);
-    }else{
+    } else {
         console.log("kaam ho gaya", newTodo.text)
     }
 
@@ -52,6 +52,23 @@ addBtn.addEventListener("click", async function () {
 
     renderTodos();
 });
+
+
+async function gettodo() {
+    console.log('fetch function is working')
+    const { data, error } = await supabaseclient
+        .from('todoss')
+        .select('*')
+
+    if (error) {
+        console.log("there is an error", error)
+    }
+
+    todos = data;
+    renderTodos();
+}
+
+gettodo();
 
 
 // =========================
@@ -70,7 +87,7 @@ function renderTodos() {
 
         todoDiv.innerHTML = `
             <div class="todo-text ${todo.isCompleted ? "completed" : ""}">
-                ${todo.task}
+                ${todo.text}
             </div>
 
             <div class="actions">
@@ -96,17 +113,25 @@ function renderTodos() {
     });
 }
 
-
 // =========================
 // DELETE TODO
 // =========================
 
-function deleteTodo(id) {
+async function deleteTodo(id) {
+    console.log("hello every one")
+
+    const data = await supabaseclient
+        .from('todoss')
+        .delete()
+        .eq('id', id)
+        .select()
 
     todos = todos.filter(function (todo) {
         return todo.id !== id;
     });
 
+
+    todos = data;
     renderTodos();
 }
 
@@ -115,13 +140,14 @@ function deleteTodo(id) {
 // EDIT TODO
 // =========================
 
-function editTodo(id) {
+
+async function editTodo(id) {
 
     const todo = todos.find(function (todo) {
         return todo.id === id;
     });
 
-    const newTask = prompt("Edit your task:", todo.task);
+    const newTask = prompt("Edit your task:", todo.text);
 
     if (newTask === null) {
         return;
@@ -131,7 +157,23 @@ function editTodo(id) {
         return;
     }
 
-    todo.task = newTask.trim();
+    const { data, error } = await supabaseclient
+        .from("todosss")
+        .update({
+            text: newTask.trim()
+        })
+        .eq("id", id)
+        .select();
+
+    console.log("UPDATE DATA:", data);
+    console.log("UPDATE ERROR:", error);
+
+    if (error) {
+        console.log("update nhi huwa", error);
+        return;
+    }
+
+    todo.text = newTask.trim();
 
     renderTodos();
 }
