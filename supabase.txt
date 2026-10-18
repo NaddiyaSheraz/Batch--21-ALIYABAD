@@ -1,0 +1,31 @@
+hum table pehle kun bana ahe supabase mein?
+Todo@+345/12
+
+supabase client kiya hai?
+
+import { createClient } from '@supabase/supabase-js'
+// Create a single supabase client for interacting with your database
+const supabase = createClient('https://xyzcompany.supabase.co', 'your-publishable-key')
+
+first line kun kaam nhi kre gi agr cdn link lga dein to.
+ gobal supabase object global local ka fark
+
+
+in dono ka matlb kun use kernaa parha hai...........
+-- GRANT INSERT ON TABLE public.todos TO anon;
+
+GRANT USAGE, SELECT ON SEQUENCE public.todos_id_seq TO anon;
+
+----
+
+
+GRANT INSERT ON public.todosss TO authenticated;
+
+-- show data on 
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON TABLE public.todosss
+TO authenticated;
+
+GRANT USAGE, SELECT
+ON SEQUENCE public.todosss_id_seq
+TO authenticated;

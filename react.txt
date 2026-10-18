@@ -1,0 +1,8 @@
+open terminal and check
+
+Checks the installed Node.js version.
+command: node -v
+
+Checks the installed npm version.
+npm (Node Package Manager)
+npm -v
